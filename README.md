@@ -12,6 +12,12 @@
 **[Ibaslogic](https://ibaslogic.com/react-tutorial-for-beginners/)**
 
 
-### Tips
+### Tips :
 
 - `<React.fragment> </React.Fragment>`  (Shortcut : <></>) : virtual element not shown in the DOM, allowed to return more than one JSX element
+
+### Notes :
+
+Component names in React must be capitalized so that its instance in JSX is not considered as DOM/HTML tag.
+
+**Prop drilling** : Getting data from component A down to component B through the props. Where component A is the parent of B.
