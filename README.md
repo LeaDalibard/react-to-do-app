@@ -10,3 +10,8 @@
 ## Source : 
 
 **[Ibaslogic](https://ibaslogic.com/react-tutorial-for-beginners/)**
+
+
+### Tips
+
+- `<React.fragment> </React.Fragment>`  (Shortcut : <></>) : virtual element not shown in the DOM, allowed to return more than one JSX element
