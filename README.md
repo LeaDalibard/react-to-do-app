@@ -17,6 +17,13 @@
 
 - `<React.fragment> </React.Fragment>`  (Shortcut : <></>) : virtual element not shown in the DOM, allowed to return more than one JSX element
 
+- Handling form that has more than one text input field :
+`onChange = e => {
+  this.setState({
+    [e.target.name]: e.target.value
+  });
+};`
+
 ### Notes :
 
 Component names in React must be capitalized so that its instance in JSX is not considered as DOM/HTML tag.
