@@ -6,12 +6,13 @@
 - Consolidated knowledge of react basics
 - Learn to make React Components
 - React Developper tool
+- Learn to deploy React App on GitHub with GH pages
 
+## Mission : 
+Tutorial to make a TodoList App with React
 
 ## Source : 
-
 **[Ibaslogic](https://ibaslogic.com/react-tutorial-for-beginners/)**
-
 
 ### Tips :
 
@@ -24,6 +25,9 @@
   });
 };`
 
+-Generate random Ids : `npm i uuid`
+
+-Deploy App on GitHub : `npm install gh-pages`
 ### Notes :
 
 Component names in React must be capitalized so that its instance in JSX is not considered as DOM/HTML tag.
@@ -32,4 +36,9 @@ Component names in React must be capitalized so that its instance in JSX is not 
 
 When you map through something, a list is created => React wants each child in the list to have a unique key prop.
 
-PrevState : updater function to the setState(), receive the previous version of the state as its parameter.
+`PrevState` : updater function to the setState(), receive the previous version of the state as its parameter.
+
+`e.preventDefault(` => preventing the default behaviour of the event
+
+
+[https://LeaDalibard.github.io/react-to-do-appc](https://LeaDalibard.github.io/react-to-do-app)
