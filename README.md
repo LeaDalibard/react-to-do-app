@@ -7,6 +7,7 @@
 - Learn to make React Components
 - React Developper tool
 - Learn to deploy React App on GitHub with GH pages
+- Use Axios
 
 ## Mission : 
 Tutorial to make a TodoList App with React
