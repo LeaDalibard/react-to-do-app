@@ -43,6 +43,7 @@ const TodoContainer = props => {
             .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
             .then(response => setTodos(response.data))
     }, [])
+
     // array to specify if the effect should re-run/prevent infinite loop => componentDidMount
     return (
         <div className="container">

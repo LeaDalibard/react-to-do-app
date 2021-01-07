@@ -9,12 +9,12 @@ const TodoItem = props => {
     }
 
     const {completed, id, title} = props.todo
+// useEffect(() => {
+//         return () => {
+//             alert("Item about to be deleted!")
+//         }
+//     }, [])
 
-    useEffect(() => {
-        return () => {
-            alert("Item about to be deleted!")
-        }
-    }, [])
 
 // to replace componentWillUnmount
     return (
