@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import TodosList from "./TodosList";
 import Header from "./Header"
 import InputTodo from "./InputTodo"
@@ -37,7 +37,13 @@ const TodoContainer = props => {
         }
         setTodos([...todos, newTodo])
     }
-
+    useEffect(() => {
+        console.log("test run")
+        axios
+            .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+            .then(response => setTodos(response.data))
+    }, [])
+    // array to specify if the effect should re-run/prevent infinite loop => componentDidMount
     return (
         <div className="container">
             <Header headerSpan={show} />
