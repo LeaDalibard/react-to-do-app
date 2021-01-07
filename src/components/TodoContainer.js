@@ -23,15 +23,18 @@ class TodoContainer extends React.Component {
     };
 
     delTodo = id => {
-        this.setState({
-                todos: [
-                    ...this.state.todos.filter(todo => {
-                        return todo.id !== id;
-                    })
-                ]
-            }
-        );
-    };
+        axios
+            .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+            .then(response =>
+                this.setState({
+                    todos: [
+                        ...this.state.todos.filter(todo => {
+                            return todo.id !== id;
+                        })
+                    ],
+                })
+            )
+    }
 
     addTodoItem = title => {
         axios
@@ -40,15 +43,15 @@ class TodoContainer extends React.Component {
                 completed: false,
             })
             .then(response =>
-            this.setState({
-                todos: [...this.state.todos, response.data],
-            })
-        )
+                this.setState({
+                    todos: [...this.state.todos, response.data],
+                })
+            )
     };
 
     componentDidMount() {
         axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-            .then(response => this.setState({todos:response.data}));
+            .then(response => this.setState({todos: response.data}));
     }
 
     render() {
