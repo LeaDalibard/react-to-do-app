@@ -34,14 +34,16 @@ class TodoContainer extends React.Component {
     };
 
     addTodoItem = title => {
-        const newTodo = {
-            id: uuidv4(),
-            title: title,
-            completed: false
-        };
-        this.setState({
-            todos: [...this.state.todos, newTodo]
-        });
+        axios
+            .post("https://jsonplaceholder.typicode.com/todos", {
+                title: title,
+                completed: false,
+            })
+            .then(response =>
+            this.setState({
+                todos: [...this.state.todos, response.data],
+            })
+        )
     };
 
     componentDidMount() {
@@ -89,3 +91,14 @@ export default TodoContainer
 //   }
 // ]
 //};
+
+// addTodoItem = title => {
+//         const newTodo = {
+//             id: uuidv4(),
+//             title: title,
+//             completed: false
+//         };
+//         this.setState({
+//             todos: [...this.state.todos, newTodo]
+//         });
+//     };
