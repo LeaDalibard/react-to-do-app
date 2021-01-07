@@ -7,7 +7,7 @@ const Header = props => {
     }
     const isInitialMount = useRef(true);
 // to prevent "Clicked" to appear already when loading the page, only on updates
-    console.log(isInitialMount);
+    //console.log(isInitialMount);
 
     useEffect(() => {
         var x = Math.floor(Math.random() * 256)
