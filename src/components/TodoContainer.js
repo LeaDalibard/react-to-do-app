@@ -8,7 +8,8 @@ import axios from "axios";
 class TodoContainer extends React.Component {
 
     state = {
-        todos: []
+        todos: [],
+        show: false
     };
 
     handleChange = (id) => {
@@ -19,6 +20,7 @@ class TodoContainer extends React.Component {
                 }
                 return todo;
             }),
+            show: !this.state.show,
         }))
     };
 
@@ -57,7 +59,7 @@ class TodoContainer extends React.Component {
     render() {
         return (
             <div className="container">
-                <Header/>
+                <Header headerSpan={this.state.show}/>
                 <InputTodo addTodoProps={this.addTodoItem}/>
                 <TodosList
                     todos={this.state.todos}
