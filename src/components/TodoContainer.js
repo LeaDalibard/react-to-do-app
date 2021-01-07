@@ -2,7 +2,7 @@ import React from "react"
 import TodosList from "./TodosList";
 import Header from "./Header"
 import InputTodo from "./InputTodo"
-import { v4 as uuidv4 } from "uuid";
+import {v4 as uuidv4} from "uuid";
 import axios from "axios";
 
 class TodoContainer extends React.Component {
@@ -35,7 +35,7 @@ class TodoContainer extends React.Component {
 
     addTodoItem = title => {
         const newTodo = {
-            id:  uuidv4(),
+            id: uuidv4(),
             title: title,
             completed: false
         };
@@ -45,8 +45,8 @@ class TodoContainer extends React.Component {
     };
 
     componentDidMount() {
-        axios.get("https://jsonplaceholder.typicode.com/todos")
-            .then(response => console.log(response.data));
+        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+            .then(response => this.setState({todos:response.data}));
     }
 
     render() {
