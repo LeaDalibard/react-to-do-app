@@ -6,6 +6,7 @@
 - Consolidated knowledge of react basics
 - Learn to make React Components
 - React Developper tool
+- Life cycle
 - Learn to deploy React App on GitHub with GH pages
 - Use Axios with Rest API [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
